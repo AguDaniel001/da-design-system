@@ -5,6 +5,12 @@ import ButtonsPage from './pages/Buttons.page'
 import App from './App'
 import TypographyPage from './pages/Typography.page'
 import InputFieldsPage from './pages/InputFields.page'
+import IconsPage from './pages/Icons.page'
+const iconsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/icons',
+  component: IconsPage,
+})
 const buttonsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/buttons',
@@ -31,6 +37,7 @@ export const routeTree = rootRoute.addChildren([
   buttonsRoute,
   typographyRoute,
   inputFieldsRoute,
+  iconsRoute,
 ])
 
 // typed routes
@@ -39,6 +46,7 @@ type AppRoutes =
   | typeof indexRoute
   | typeof typographyRoute
   | typeof inputFieldsRoute
+  | typeof iconsRoute
 
 
 export type RouteTo = AppRoutes["fullPath"]

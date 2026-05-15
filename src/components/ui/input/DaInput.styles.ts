@@ -129,6 +129,7 @@ export const statusStyles: Record<
   error: {
     border:    [
       "border-[var(--color-input-border-error)]",
+      "hover:border-[var(--color-input-border-error)]",
       "focus-within:border-[var(--color-input-border-error)]",
     ].join(" "),
     textColor: "text-red-500",
@@ -137,6 +138,7 @@ export const statusStyles: Record<
   success: {
     border:    [
       "border-[var(--color-border-success)]",
+      "hover:border-[var(--color-border-success)]",
       "focus-within:border-[var(--color-border-success)]",
     ].join(" "),
     textColor: "text-green-600",
@@ -145,6 +147,7 @@ export const statusStyles: Record<
   warning: {
     border:    [
       "border-[var(--color-border-warning)]",
+      "hover:border-[var(--color-border-warning)]",
       "focus-within:border-[var(--color-border-warning)]",
     ].join(" "),
     textColor: "text-yellow-500",

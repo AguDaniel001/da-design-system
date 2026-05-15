@@ -24,7 +24,7 @@
 
   /* ── Text / Foreground ──────────────────────────────────── */
   --color-text-primary:             var(--color-neutral-25);
-  --color-text-secondary:           var(--color-surface-400 );
+  --color-text-secondary:           var(--color-surface-200 );
   --color-text-tertiary:            var(--color-surface-300);
   --color-text-disabled:            var(--color-surface-500);
   --color-text-brand:               var(--color-teal-700);
@@ -87,7 +87,7 @@
 
   /* ── Input fields ───────────────────────────────────────── */
   --color-input-bg:                 transparent;
-  --color-input-bg-filled:          var(--color-surface-900);
+  --color-input-bg-filled:          var(--color-surface-600);
   --color-input-text:               var(--color-surface-200);
   --color-input-placeholder:        var(--color-surface-400);
   --color-input-border:             var(--color-surface-600);

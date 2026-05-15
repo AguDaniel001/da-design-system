@@ -103,10 +103,10 @@
   --color-border-default:           var(--color-neutral-200);
   --color-border-subtle:            var(--color-neutral-100);
   --color-border-strong:            var(--color-neutral-300);
-  --color-border-brand:             var(--color-blue-700-a76);
+  --color-border-brand:             var(--color-teal-700-a76);
   --color-border-accent:            var(--color-yellow-100);
   --color-border-inverse:           var(--color-white);
-  --color-border-focus:             var(--color-blue-700);
+  --color-border-focus:             var(--color-teal-700);
 
   --color-border-success:           var(--color-green-300);
   --color-border-warning:           var(--color-yellow-300);
@@ -117,12 +117,12 @@
      Consistent token set for all form inputs.
      ───────────────────────────────────────────────────────── */
   --color-input-bg:                 transparent;
-  --color-input-bg-filled:          var(--color-neutral-50);
+  --color-input-bg-filled:          var(--color-neutral-200);
   --color-input-text:               var(--color-neutral-700);
   --color-input-placeholder:        var(--color-neutral-400);
   --color-input-border:             var(--color-neutral-200);
-  --color-input-border-hover:       var(--color-neutral-300);
-  --color-input-border-focus:       var(--color-blue-700);
+  --color-input-border-hover:       var(--color-brand-default);
+  --color-input-border-focus:       var(--color-brand-default);
   --color-input-border-error:       var(--color-red-500);
 
 
@@ -232,7 +232,6 @@
   --color-input-background:         var(--color-input-bg);
   --color-input-filled:             var(--color-input-bg-filled);
   --color-input-text:               var(--color-input-text);
-  --color-input-placeholder:        var(--color-input-placeholder);
 
   --color-ring:                     var(--color-border-focus);
 

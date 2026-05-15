@@ -31,13 +31,14 @@
  */
 
 import * as React from "react"
-import clsx from "clsx"
+import { cn } from "../../../utils/cn"
 import type { BaseDaInputProps, InputStatus } from "./DaInput.types"
 import { variantStyles, statusStyles, sizeStyles, textareaSizeStyles } from "./DaInput.styles"
 import { DaInputLabel }     from "./DaInputLabel"
 import { DaInputAdornment } from "./DaInputAdornment"
 import { DaInputTrailing }  from "./DaInputTrailing"
 import { DaInputFeedback }  from "./DaInputFeedback"
+import clsx from "clsx"
 
 // ─── Props ────────────────────────────────────────────────────
 
@@ -97,7 +98,7 @@ export function DaInputBase({
   if (showCount)   descIds.push(`${inputId}-count`)
 
   return (
-    <div className={clsx("flex flex-col gap-1", containerClassName)}>
+    <div className={cn("flex flex-col gap-1", containerClassName)}>
 
       {label && (
         <DaInputLabel
@@ -110,10 +111,10 @@ export function DaInputBase({
 
       {/* ── Field shell ──────────────────────────────────── */}
       <div
-        className={clsx(
+        className={cn(
           "relative flex items-stretch rounded-sm overflow-hidden",
           "transition-[border-color,background-color] duration-150",
-          ...variantStyles[variant],
+          variantStyles[variant],
           status !== "default" && statusStyles[status].border,
           disabled && "opacity-50 cursor-not-allowed pointer-events-none",
           readOnly && "cursor-default select-none",

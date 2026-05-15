@@ -1,121 +1,85 @@
 import DaButton from "../components/ui/button/DaButton";
 import DaTypography from "../components/ui/typography/DaTypography";
 
-
 export default function ButtonsPage() {
-    return (
-      <div>
-              
-        <section className='p-5 w-full bg-background smooth-transition min-h-screen flex flex-wrap flex flex-wrap-col items-center justify-center gap-10 '>
-        <div className='   '>
+  return (
+    <div className="px-5 pb-24 pt-30 bg-background smooth-transition min-h-screen">
+      <div className="max-w-4xl mx-auto space-y-16">
+      <header className="space-y-4">
+        <DaTypography variant="displayLg">Buttons</DaTypography>
+        <DaTypography variant="titleMd" color="secondary">
+          Versatile button components for actions, navigation, and state-driven interactions.
+        </DaTypography>
+      </header>
 
-        <div className="mb-10">
-          <DaTypography variant='displayMd' align="center">
-            Buttons
-          </DaTypography>
-          
+      {/* ── Visual Variants ─────────────────────────────────────── */}
+      <section className="space-y-6">
+        <DaTypography variant="titleLg">Visual Variants</DaTypography>
+        <div className="flex flex-wrap gap-4">
+          <DaButton variant="primary">Primary</DaButton>
+          <DaButton variant="secondary">Secondary</DaButton>
+          <DaButton variant="outline">Outline</DaButton>
+          <DaButton variant="ghost">Ghost</DaButton>
+          <DaButton variant="danger">Danger</DaButton>
         </div>
+      </section>
 
-          <DaTypography className="mt-10 " variant='titleLg' align="center">
-            Use-cases
-          </DaTypography>
-        <div className='flex flex-wrap p-5 gap-5 w-full justify-center '>
-          <DaButton variant="primary" size="md" to="/">
-            Primary
-          </DaButton>
-          <DaButton variant="primary" loading size="md" to="/">
-            Loading
-          </DaButton>
-          <DaButton variant="primary" disabled size="md" >
-            Disabled
-          </DaButton>
-          <DaButton variant="secondary" prefixIcon="notification" size="md" >
-            Prefix Icon
-          </DaButton>
-          
-          <DaButton variant="outline" iconOnly icon="search" size="md"  label="Search" />
-            
-          <DaButton variant="danger" suffixIcon="logout" size="md" >
-            Suffix Icon
-          </DaButton>
+      {/* ── Sizes ──────────────────────────────────────────────── */}
+      <section className="space-y-6">
+        <DaTypography variant="titleLg">Sizes</DaTypography>
+        <div className="flex flex-wrap items-end gap-6">
+          <div className="space-y-2">
+            <DaTypography variant="labelSm" color="tertiary">Small (sm)</DaTypography>
+            <DaButton size="sm">Action</DaButton>
+          </div>
+          <div className="space-y-2">
+            <DaTypography variant="labelSm" color="tertiary">Medium (md)</DaTypography>
+            <DaButton size="md">Action</DaButton>
+          </div>
+          <div className="space-y-2">
+            <DaTypography variant="labelSm" color="tertiary">Large (lg)</DaTypography>
+            <DaButton size="lg">Action</DaButton>
+          </div>
         </div>
-        <DaTypography className="mb-5 mt-5" variant='titleLg' align="center">
-            Large Sizes
-          </DaTypography>
+      </section>
 
-        <div className='flex flex-wrap   gap-5 w-full justify-center '>
-          <DaButton variant="primary" size="lg" to="/">
-            Back
-          </DaButton>
-          <DaButton variant="primary" size="lg" >
-            Primary
-          </DaButton>
-          <DaButton variant="secondary" size="lg" >
-            Secondary
-          </DaButton>
-          <DaButton variant="outline" size="lg" >
-            Outline
-          </DaButton>
-          <DaButton variant="ghost" size="lg" >
-            Ghost
-          </DaButton>
-          <DaButton variant="danger" size="lg" >
-            Danger
-          </DaButton>
+      {/* ── Icons & Composition ────────────────────────────────── */}
+      <section className="space-y-6">
+        <DaTypography variant="titleLg">Icons & Composition</DaTypography>
+        <div className="flex flex-wrap gap-4">
+          <DaButton prefixIcon="add">Leading Icon</DaButton>
+          <DaButton suffixIcon="chevron-right">Trailing Icon</DaButton>
+          <DaButton prefixIcon="cloud" suffixIcon="download">Both Icons</DaButton>
+          <DaButton iconOnly icon="search" label="Search" />
+          <DaButton iconOnly icon="notification" variant="secondary" label="Notifications" />
+          <DaButton iconOnly icon="delete" variant="danger" label="Delete" />
         </div>
-                <DaTypography className="mt-10 " variant='titleLg' align="center">
-            Medium Sizes
-          </DaTypography>
-        <div className='flex flex-wrap p-5 gap-5 w-full justify-center '>
-          <DaButton variant="primary" size="md" to="/">
-            Back
-          </DaButton>
-          <DaButton variant="primary" size="md" >
-            Primary
-          </DaButton>
-          <DaButton variant="secondary" size="md" >
-            Secondary
-          </DaButton>
-          <DaButton variant="outline" size="md" >
-            Outline
-          </DaButton>
-          <DaButton variant="ghost" size="md" >
-            Ghost
-          </DaButton>
-          <DaButton variant="danger" size="md" >
-            Danger
-          </DaButton>
-        </div>
-                <DaTypography className="mt-10 " variant='titleLg' align="center">
-            Small Sizes
-          </DaTypography>
-        <div className='flex flex-wrap p-5 gap-5 w-full justify-center '>
-          <DaButton variant="primary" size="sm" to="/">
-            Back
-          </DaButton>
-          <DaButton variant="primary" size="sm" >
-            Primary
-          </DaButton>
-          <DaButton variant="secondary" size="sm" >
-            Secondary
-          </DaButton>
-          <DaButton variant="outline" size="sm" >
-            Outline
-          </DaButton>
-          <DaButton variant="ghost" size="sm" >
-            Ghost
-          </DaButton>
-          <DaButton variant="danger" size="sm" >
-            Danger
-          </DaButton>
-        </div>
+      </section>
 
-
-        
+      {/* ── States ─────────────────────────────────────────────── */}
+      <section className="space-y-6">
+        <DaTypography variant="titleLg">Interactive States</DaTypography>
+        <div className="flex flex-wrap gap-4">
+          <DaButton loading>Loading State</DaButton>
+          <DaButton variant="secondary" loading>Secondary Loading</DaButton>
+          <DaButton disabled>Disabled State</DaButton>
+          <DaButton variant="outline" disabled>Outline Disabled</DaButton>
         </div>
-        
+      </section>
+
+      {/* ── Routing & Navigation ───────────────────────────────── */}
+      <section className="space-y-6">
+        <DaTypography variant="titleLg">Routing</DaTypography>
+        <div className="flex flex-wrap gap-4">
+          <DaButton to="/" variant="secondary" prefixIcon="home">
+            Go to Home
+          </DaButton>
+          <DaButton to="/input-fields" variant="outline" suffixIcon="chevron-right">
+            Explore Inputs
+          </DaButton>
+        </div>
       </section>
       </div>
-    )
-  }
-
+    </div>
+  );
+}

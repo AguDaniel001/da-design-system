@@ -1,23 +1,19 @@
-import DaButton from "../components/ui/button/DaButton";
 import DaTypography from "../components/ui/typography/DaTypography";
 
 export default function TypographyPage() {
   return (
     <div className="w-full bg-background smooth-transition min-h-screen">
-      <section className="p-5 w-full flex flex-col items-center gap-10">
+      <section className="p-5 pt-30 w-full flex flex-col items-center gap-10">
         <div className="w-full max-w-4xl">
-          <div className="mb-10 mt-10 flex flex-col items-center gap-4">
-            <DaButton variant="outline" size="sm" to="/">
-              Back to Home
-            </DaButton>
-            <DaTypography variant="displayMd" align="center">
+          <div className="mb-10 mt-10 flex flex-col  gap-4">
+            <DaTypography variant="displayMd" align="left">
               Typography
             </DaTypography>
           </div>
 
           {/* Display Section */}
           <div className="mb-16">
-            <DaTypography variant="titleLg" align="center" className="mb-8 border-b pb-2 border-primary/10">
+            <DaTypography variant="titleLg"className="mb-8 border-b pb-2 border-primary/10">
               Display
             </DaTypography>
             <div className="flex flex-col gap-8">
@@ -38,7 +34,7 @@ export default function TypographyPage() {
 
           {/* Headline Section */}
           <div className="mb-16">
-            <DaTypography variant="titleLg" align="center" className="mb-8 border-b pb-2 border-primary/10">
+            <DaTypography variant="titleLg" className="mb-8 border-b pb-2 border-primary/10">
               Headline
             </DaTypography>
             <div className="flex flex-col gap-8">
@@ -59,7 +55,7 @@ export default function TypographyPage() {
 
           {/* Title Section */}
           <div className="mb-16">
-            <DaTypography variant="titleLg" align="center" className="mb-8 border-b pb-2 border-primary/10">
+            <DaTypography variant="titleLg"  className="mb-8 border-b pb-2 border-primary/10">
               Title
             </DaTypography>
             <div className="flex flex-col gap-8">
@@ -80,7 +76,7 @@ export default function TypographyPage() {
 
           {/* Body Section */}
           <div className="mb-16">
-            <DaTypography variant="titleLg" align="center" className="mb-8 border-b pb-2 border-primary/10">
+            <DaTypography variant="titleLg"  className="mb-8 border-b pb-2 border-primary/10">
               Body
             </DaTypography>
             <div className="flex flex-col gap-8">
@@ -107,7 +103,7 @@ export default function TypographyPage() {
 
           {/* Label Section */}
           <div className="mb-16">
-            <DaTypography variant="titleLg" align="center" className="mb-8 border-b pb-2 border-primary/10">
+            <DaTypography variant="titleLg"  className="mb-8 border-b pb-2 border-primary/10">
               Label
             </DaTypography>
             <div className="flex flex-col gap-8">
@@ -128,7 +124,7 @@ export default function TypographyPage() {
 
           {/* Others Section */}
           <div className="mb-16">
-            <DaTypography variant="titleLg" align="center" className="mb-8 border-b pb-2 border-primary/10">
+            <DaTypography variant="titleLg"  className="mb-8 border-b pb-2 border-primary/10">
               Others
             </DaTypography>
             <div className="flex flex-col gap-8">

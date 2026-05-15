@@ -132,7 +132,7 @@
      Higher step = deeper / darker layer, mirrors neutral dir.
      ───────────────────────────────────────────────────────── */
   --color-surface-950:     #0E1117;   /* page root — deepest       */
-  --color-surface-950:     #042537;   /* page root — deepest       */
+  /* --color-surface-950:     #042537;    */
   --color-surface-900:     #111827;
   --color-surface-850:     #151922;
   --color-surface-800:     #202428;

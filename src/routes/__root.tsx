@@ -1,4 +1,5 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { DaNavbar } from '../components/ui/navbar/DaNavbar'
 
 export const Route = createRootRoute({
   component: RootLayout,
@@ -7,6 +8,7 @@ export const Route = createRootRoute({
 function RootLayout() {
   return (
     <>
+      <DaNavbar />
       <Outlet />
     </>
   )

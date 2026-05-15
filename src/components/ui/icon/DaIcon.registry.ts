@@ -55,14 +55,15 @@ import { TbChevronRight,
          TbCurrencyBitcoin,
          TbCoinBitcoin,
          TbBuildingSkyscraper,
-         TbChartCandle }             from "react-icons/tb"
+         TbChartCandle, 
+         }             from "react-icons/tb"
 import { RiEyeLine,
          RiEyeOffLine,
          RiSettings4Line,
          RiUserReceivedLine }        from "react-icons/ri"
 import { IoPersonOutline }           from "react-icons/io5"
 import { BiBell }                    from "react-icons/bi"
-import { BsCurrencyDollar,
+import { BsCloud, BsCurrencyDollar,
          BsGraphUp }                 from "react-icons/bs"
 import { LiaExchangeAltSolid }       from "react-icons/lia"
 import { LuHistory }                 from "react-icons/lu"
@@ -98,6 +99,7 @@ export const ICON_MAP = {
   filter:    TbFilter,
   add:       TbPlus,
   remove:    TbMinus,
+  cloud:     BsCloud,
   close:     TbX,
   x:         TbX,        // alias — used by DaInputTrailing clear button
   eye:       RiEyeLine,
