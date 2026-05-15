@@ -11,22 +11,28 @@
    _dark.css      → dark mode overrides (only what changes)
    ============================================================ */
 
-/* @import "tailwindcss";
-@import "@fontsource/inter/index.css";
+@import "tailwindcss";
 @import "@fontsource/roboto/index.css";
+
+@import "@fontsource/inter/index.css";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
 @import "@fontsource/inter/800.css";
 @import "@fontsource/inter/900.css";
+
 @import "./fonts/ancola/ancola.css";
 
+@import "@fontsource/manrope/index.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+@import "@fontsource/manrope/800.css";
 
+@import "./_colors.css";
+@import "./_theme.css";
+@import "./_dark.css";
+@import "./_structure.css";
 
 /* Dark mode via class strategy — no dark: prefix ever needed in components */
-@import "tailwindcss";
-@import "./theme/_colors.css";
-@import "./theme/_structure.css";
-@import "./theme/_theme.css";
-@import "./theme/_dark.css";
-/* @custom-variant dark (&:where(.dark, .dark *)); */
+@custom-variant dark (&:where(.dark, .dark *));

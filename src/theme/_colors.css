@@ -1,0 +1,190 @@
+/* ============================================================
+   _colors.css
+   RAW COLOR PALETTE
+   ─────────────────────────────────────────────────────────────
+   Single source of truth for every raw color value.
+   ⚠️  Never reference these directly in components.
+       Always go through the semantic tokens in main.css.
+
+   Convention : --color-{hue}-{step}
+   Scale      : 50 (lightest) → 950 (darkest), Flutter/Material
+   Alpha      : --color-{hue}-{step}-a{opacity%}
+                e.g. --color-green-700-a10  →  green-700 @ 10%
+   ============================================================ */
+
+:root {
+
+  /* ─────────────────────────────────────────────────────────
+     NEUTRALS
+     Pure greys — text, dividers, disabled, backgrounds
+     ───────────────────────────────────────────────────────── */
+  --color-white:           #FFFFFF;
+  --color-black:           #000000;
+
+  --color-neutral-0:       #FFFFFF;
+  --color-neutral-25:      #FDFDFD;   /* near-white canvas         */
+  --color-neutral-50:      #F9FAFB;
+  --color-neutral-100:     #F3F4F6;
+  --color-neutral-200:     #EEEEEE;
+  --color-neutral-300:     #CCCCCC;
+  --color-neutral-400:     #999999;
+  --color-neutral-500:     #777777;
+  --color-neutral-600:     #666666;
+  --color-neutral-700:     #444444;
+  --color-neutral-800:     #222222;
+  --color-neutral-900:     #111827;   /* near-black, primary text  */
+  --color-neutral-950:     #111111;
+
+
+  /* ─────────────────────────────────────────────────────────
+     GREEN  (Brand — light mode)
+     ───────────────────────────────────────────────────────── */
+  --color-green-50:        #ECFDF3;
+  --color-green-100:       #D1FAE5;
+  --color-green-200:       #A7F3D0;
+  --color-green-300:       #6EE7B7;
+  --color-green-400:       #34D399;
+  --color-green-500:       #10B981;
+  --color-green-600:       #059669;
+  --color-green-700:       #027A48;   /* ← brand default           */
+  --color-green-800:       #065F46;
+  --color-green-900:       #064E3B;
+  --color-green-950:       #022C22;
+
+  --color-green-700-a10:   #027A481A;
+  --color-green-700-a20:   #027A4833;
+  --color-green-700-a76:   #027A48C2;
+
+
+  /* ─────────────────────────────────────────────────────────
+     LIME  (Nature / tertiary accent)
+     ───────────────────────────────────────────────────────── */
+  --color-lime-50:         #F7FEE7;
+  --color-lime-100:        #ECF7DA;
+  --color-lime-200:        #D9F99D;
+  --color-lime-300:        #BEF264;
+  --color-lime-400:        #A3E635;
+  --color-lime-500:        #84CC16;
+  --color-lime-600:        #65A30D;
+  --color-lime-700:        #4D7C0F;
+  --color-lime-800:        #3F6212;
+  --color-lime-900:        #365314;
+  --color-lime-950:        #1A2E05;
+
+  --color-lime-400-a15:    #91FF0027;
+
+
+  /* ─────────────────────────────────────────────────────────
+     YELLOW / AMBER  (Accent)
+     ───────────────────────────────────────────────────────── */
+  --color-yellow-50:       #FFFBE6;
+  --color-yellow-100:      #FFF2B3;
+  --color-yellow-200:      #FFE566;
+  --color-yellow-300:      #FFD700;
+  --color-yellow-400:      #FFC500;   /* ← accent default          */
+  --color-yellow-500:      #F59E0B;
+  --color-yellow-600:      #D97706;
+  --color-yellow-700:      #CCA800;
+  --color-yellow-800:      #92400E;
+  --color-yellow-900:      #78350F;
+  --color-yellow-950:      #451A03;
+
+  --color-yellow-400-a40:  #FFC50067;
+
+
+  /* ─────────────────────────────────────────────────────────
+     BLUE  (Brand — dark mode)
+     ───────────────────────────────────────────────────────── */
+  --color-blue-50:         #EFF6FF;
+  --color-blue-100:        #DBEAFE;
+  --color-blue-200:        #BFDBFE;
+  --color-blue-300:        #93C5FD;
+  --color-blue-400:        #60A5FA;
+  --color-blue-500:        #3B82F6;
+  --color-blue-600:        #2563EB;
+  --color-blue-700:        #2080C4;   /* ← dark brand default      */
+  --color-blue-800:        #1D4ED8;
+  --color-blue-900:        #1E3A5F;
+  --color-blue-950:        #172554;
+
+
+  /* ─────────────────────────────────────────────────────────
+     TEAL  (Brand accent — dark mode)
+     ───────────────────────────────────────────────────────── */
+  --color-teal-50:         #F0FDFA;
+  --color-teal-100:        #CCFBF1;
+  --color-teal-200:        #99F6E4;
+  --color-teal-300:        #5EEAD4;
+  --color-teal-400:        #2DD4BF;
+  --color-teal-500:        #14B8A6;
+  --color-teal-600:        #04965E;
+  --color-teal-700:        #04C08B;   /* ← dark accent default     */
+  --color-teal-800:        #0F766E;
+  --color-teal-900:        #134E4A;
+  --color-teal-950:        #042F2E;
+
+  --color-teal-600-a19:    #04965E30;
+  --color-teal-700-a76:    #04C08BC2;
+
+
+  /* ─────────────────────────────────────────────────────────
+     SURFACE  (Dark mode layer scale)
+     Higher step = deeper / darker layer, mirrors neutral dir.
+     ───────────────────────────────────────────────────────── */
+  --color-surface-950:     #0E1117;   /* page root — deepest       */
+  --color-surface-950:     #042537;   /* page root — deepest       */
+  --color-surface-900:     #111827;
+  --color-surface-850:     #151922;
+  --color-surface-800:     #202428;
+  --color-surface-750:     #383b41;
+  --color-surface-700:     #1E3A5F;
+  --color-surface-600:     #334155;
+  --color-surface-500:     #475569;
+  --color-surface-400:     #64748B;
+  --color-surface-300:     #94A3B8;
+  --color-surface-200:     #CBD5E1;
+  --color-surface-100:     #E2E8F0;
+
+
+  /* ─────────────────────────────────────────────────────────
+     RED  (Error / destructive states)
+     ───────────────────────────────────────────────────────── */
+  --color-red-50:          #FEF2F2;
+  --color-red-100:         #FEE2E2;
+  --color-red-200:         #FECACA;
+  --color-red-300:         #FCA5A5;
+  --color-red-400:         #F87171;
+  --color-red-500:         #EF4444;
+  --color-red-600:         #DC2626;
+  --color-red-700:         #B91C1C;
+  --color-red-800:         #991B1B;
+  --color-red-900:         #7F1D1D;
+  --color-red-950:         #2D0A0A;
+
+
+  /* ─────────────────────────────────────────────────────────
+     BLUE ALPHA  (Brand muted wash — light & dark)
+     ───────────────────────────────────────────────────────── */
+  --color-blue-700-a10:    rgba(32, 128, 196, 0.10);
+  --color-blue-700-a20:    rgba(32, 128, 196, 0.20);
+  --color-blue-700-a76:    rgba(32, 128, 196, 0.76);
+  --color-yellow-400-a6:   rgba(255, 197, 0, 0.06);
+
+
+  /* ─────────────────────────────────────────────────────────
+     BLACK ALPHA  (Shadows & overlays)
+     Named by real opacity — no guessing what a14 means.
+     ───────────────────────────────────────────────────────── */
+  --color-black-a5:        #0000000D;
+  --color-black-a8:        #00000014;
+  --color-black-a9:        #00000017;
+  --color-black-a3:        #00000007;
+  --color-black-a12:       #0000001F;
+  --color-black-a14:       #00000024;
+  --color-black-a20:       #00000033;
+  --color-black-a40:       #00000066;
+  --color-black-a60:       #00000099;
+
+  --color-white-a6:        #FFFFFF0F;
+
+}

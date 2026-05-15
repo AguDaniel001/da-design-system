@@ -99,14 +99,15 @@ export default function DaButton({
       onClick={onClick}
       aria-label={rest.iconOnly ? rest.label : undefined}
       className={clsx(
-        baseStyles,
-        sizeStyles[size],
-        rest.iconOnly && iconOnlySizeStyles[size],
-        variantStyles[variant],
-        isDisabled && stateStyles.disabled,
-        loading && !disabled && stateStyles.loading,
-        className,
-      )}
+  baseStyles,
+  rest.iconOnly
+    ? iconOnlySizeStyles[size]
+    : sizeStyles[size],
+  variantStyles[variant],
+  isDisabled && stateStyles.disabled,
+  loading && !disabled && stateStyles.loading,
+  className,
+)}
     >
       {content}
     </button>

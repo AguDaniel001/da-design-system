@@ -3,10 +3,22 @@ import { Route as rootRoute } from './routes/__root'
 
 import ButtonsPage from './pages/Buttons.page'
 import App from './App'
+import TypographyPage from './pages/Typography.page'
+import InputFieldsPage from './pages/InputFields.page'
 const buttonsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/buttons',
   component: ButtonsPage,
+})
+const typographyRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/typography',
+  component: TypographyPage,
+})
+const inputFieldsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/input-fields',
+  component: InputFieldsPage,
 })
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -15,12 +27,18 @@ const indexRoute = createRoute({
 })
 
 export const routeTree = rootRoute.addChildren([
+  indexRoute,
   buttonsRoute,
+  typographyRoute,
+  inputFieldsRoute,
 ])
 
 // typed routes
 type AppRoutes =
   | typeof buttonsRoute
   | typeof indexRoute
+  | typeof typographyRoute
+  | typeof inputFieldsRoute
+
 
 export type RouteTo = AppRoutes["fullPath"]

@@ -1,0 +1,82 @@
+/* ============================================================
+   _structure.css
+   STRUCTURAL TOKENS  (mode-agnostic)
+   ─────────────────────────────────────────────────────────────
+   Tokens that never change between light and dark mode.
+   Includes: typography, border radius, shadow geometry.
+
+   ⚠️  Never put color values here. Colors belong in
+       _theme.css (light) and _dark.css (dark overrides).
+   ============================================================ */
+
+@theme {
+
+  /* ── Typography ─────────────────────────────────────────────
+     Declared once — never override in dark mode.
+     Font weights are loaded via @fontsource in main.css.
+     ───────────────────────────────────────────────────────── */
+  --font-sans:    "Inter", sans-serif;
+  --font-roboto:  "Roboto", sans-serif;
+  --font-ancola:  "Ancola", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+
+
+  /* ── Border Radius ──────────────────────────────────────────
+     xs   → chips, badges, tight tags
+     sm   → small buttons, inputs
+     md   → cards, larger buttons
+     lg   → modals, sheets
+     xl   → feature cards, hero sections
+     2xl  → large decorative containers
+     full → pills, avatars, circular loaders
+     ───────────────────────────────────────────────────────── */
+  --radius-xs:    2px;
+  --radius-sm:    4px;
+  --radius-md:    12px;
+  --radius-lg:    20px;
+  --radius-xl:    23.5px;
+  --radius-2xl:   28px;
+  --radius-full:  9999px;
+
+
+  /* ── Elevation  (shadow geometry) ───────────────────────────
+     The spread, blur, and offset values are structural and
+     never change. Only the shadow COLOR tokens change per mode
+     — those live in _theme.css and _dark.css.
+
+     elevation-0  → flush, no lift (borders define edges)
+     elevation-1  → subtle lift — inputs, list items
+     elevation-2  → raised — cards, dropdowns
+     elevation-3  → floating — sticky headers, FABs
+     elevation-4  → modal / dialog level
+     elevation-5  → popovers, toasts above everything
+
+     Shadow color tokens used here:
+       --shadow-color-*  defined in _theme.css / _dark.css
+     ───────────────────────────────────────────────────────── */
+  --shadow-elevation-0:   none;
+  --shadow-elevation-1:   0px 1px 2px var(--shadow-color-near),
+                          0px 1px 3px var(--shadow-color-far);
+  --shadow-elevation-2:   0px 4px 6px -1px var(--shadow-color-near),
+                          0px 2px 4px -1px var(--shadow-color-far);
+  --shadow-elevation-3:   0px 10px 15px -3px var(--shadow-color-near),
+                          0px 4px 6px -2px var(--shadow-color-far);
+  --shadow-elevation-4:   0px 20px 24px -4px var(--shadow-color-near),
+                          0px 8px 10px -3px var(--shadow-color-far);
+  --shadow-elevation-5:   0px 32px 64px -12px var(--shadow-color-strong),
+                          0px 4px 64px -1px var(--shadow-color-near);
+
+  --shadow-brand:         0px 20px 64px -4px var(--shadow-color-brand-far),
+                          0px 4px 12px -2px var(--shadow-color-brand-near);
+
+  /* Semantic aliases — use these in components, not elevation-N */
+  --shadow-sm:        var(--shadow-elevation-1);
+  --shadow-md:        var(--shadow-elevation-2);
+  --shadow-lg:        var(--shadow-elevation-3);
+  --shadow-xl:        var(--shadow-elevation-4);
+  --shadow-2xl:       var(--shadow-elevation-5);
+  --shadow-card:      var(--shadow-elevation-2);
+  --shadow-modal:     var(--shadow-elevation-4);
+  --shadow-dropdown:  var(--shadow-elevation-3);
+
+}

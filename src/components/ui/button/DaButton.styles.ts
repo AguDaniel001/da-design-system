@@ -29,9 +29,9 @@ export const sizeStyles = {
  * Drops padding and min-width — width equals height.
  */
 export const iconOnlySizeStyles = {
-  sm: "h-8  w-8  p-0 min-w-0",
-  md: "h-10 w-10 p-0 min-w-0",
-  lg: "h-12 w-12 p-0 min-w-0",
+  sm: "h-8  w-8  p-0 min-w-0 rounded-[var(--radius-sm)]",
+  md: "h-10 w-10 p-0 min-w-0 rounded-[var(--radius-md)]",
+  lg: "h-12 w-12 p-0 min-w-0 rounded-[var(--radius-md)]",
 } as const
 
 /**

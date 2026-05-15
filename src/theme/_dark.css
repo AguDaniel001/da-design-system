@@ -1,0 +1,183 @@
+/* ============================================================
+   _dark.css
+   DARK MODE OVERRIDES
+   ─────────────────────────────────────────────────────────────
+   Only tokens that change from light mode are listed here.
+   Structural tokens (radius, fonts) are never repeated —
+   they live in _structure.css and never change.
+
+   Activated via the .dark class on <html> or a parent element,
+   defined in main.css as:
+     @custom-variant dark (&:where(.dark, .dark *));
+
+   Two layers mirroring _theme.css:
+   1. SEMANTIC TOKENS  — design system overrides
+   2. TAILWIND ALIASES — only the aliases whose value changes
+                         in dark mode need to be repeated here
+   ============================================================ */
+
+.dark {
+
+  /* ════════════════════════════════════════════════════════════
+     PART 1 — SEMANTIC TOKEN OVERRIDES
+     ════════════════════════════════════════════════════════════ */
+
+  /* ── Text / Foreground ──────────────────────────────────── */
+  --color-text-primary:             var(--color-neutral-25);
+  --color-text-secondary:           var(--color-surface-400 );
+  --color-text-tertiary:            var(--color-surface-300);
+  --color-text-disabled:            var(--color-surface-500);
+  --color-text-brand:               var(--color-teal-700);
+  --color-text-accent:              var(--color-yellow-100);
+  --color-text-on-accent:           var(--color-neutral-900);
+  --color-text-on-brand:            var(--color-white);
+  --color-text-link:                var(--color-teal-700);
+  --color-text-link-hover:          var(--color-teal-600);
+
+
+  /* ── Backgrounds ────────────────────────────────────────── */
+  --color-bg-canvas:                var(--color-surface-950);
+  --color-bg-surface:               var(--color-surface-850);
+  --color-bg-sunken:                var(--color-black-a9);
+  --color-bg-raised:                var(--color-surface-750);
+  --color-bg-overlay:               var(--color-black-a60);
+
+  --color-bg-brand:                 var(--color-teal-600-a19);
+  --color-bg-brand-subtle:          var(--color-teal-950);
+  --color-bg-accent:                var(--color-yellow-400-a40);
+  --color-bg-accent-subtle:         var(--color-lime-400-a15);
+
+  --color-bg-success:               var(--color-green-950);
+  --color-bg-warning:               var(--color-yellow-950);
+  --color-bg-error:                 var(--color-red-950);
+  --color-bg-info:                  var(--color-blue-950);
+
+
+  /* ── Brand ──────────────────────────────────────────────── */
+  --color-brand-default:            var(--color-teal-600);
+  --color-brand-hover:              var(--color-teal-700);
+  --color-brand-active:             var(--color-teal-600);
+  --color-brand-subtle:             var(--color-surface-800);
+  --color-brand-muted:              var(--color-blue-700-a10);
+  --color-brand-on:                 var(--color-white);
+
+
+  /* ── Accent ─────────────────────────────────────────────── */
+  --color-accent-default:           var(--color-yellow-400-a40);
+  --color-accent-hover:             var(--color-yellow-400);
+  --color-accent-active:            var(--color-yellow-500);
+  --color-accent-subtle:            var(--color-lime-400-a15);
+  --color-accent-muted:             var(--color-yellow-400-a6);
+  --color-accent-fg:                var(--color-yellow-100);
+
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --color-border-default:           var(--color-white-a6);
+  --color-border-subtle:            var(--color-surface-900);
+  --color-border-strong:            var(--color-neutral-450);
+  --color-border-brand:             var(--color-teal-700-a76);
+  --color-border-accent:            var(--color-yellow-400-a40);
+  --color-border-inverse:           var(--color-white);
+  --color-border-focus:             var(--color-teal-700);
+
+  --color-border-success:           var(--color-teal-800);
+  --color-border-warning:           var(--color-yellow-800);
+  --color-border-error:             var(--color-red-900);
+
+
+  /* ── Input fields ───────────────────────────────────────── */
+  --color-input-bg:                 transparent;
+  --color-input-bg-filled:          var(--color-surface-900);
+  --color-input-text:               var(--color-surface-200);
+  --color-input-placeholder:        var(--color-surface-400);
+  --color-input-border:             var(--color-surface-600);
+  --color-input-border-hover:       var(--color-brand-default);
+  --color-input-border-focus:       var(--color-brand-default);
+  --color-input-border-error:       var(--color-red-500);
+
+
+  /* ── Shadow color tokens ────────────────────────────────────
+     Dark surfaces absorb less light — shadows need more opacity
+     to remain visible against near-black backgrounds.
+     Overriding just these 5 tokens re-themes every shadow
+     defined in _structure.css automatically.
+     ───────────────────────────────────────────────────────── */
+  --shadow-color-far:               var(--color-black-a12);
+  --shadow-color-near:              var(--color-black-a20);
+  --shadow-color-strong:            var(--color-black-a60);
+  --shadow-color-brand-far:         var(--color-teal-600-a19);
+  --shadow-color-brand-near:        var(--color-teal-700-a76);
+
+
+  /* ════════════════════════════════════════════════════════════
+     PART 2 — TAILWIND ALIAS OVERRIDES
+     ─────────────────────────────────────────────────────────
+     Only aliases whose resolved value changes in dark mode
+     are listed here. Because each alias points to a semantic
+     token, and the semantic tokens above already update, many
+     aliases automatically pick up the right value with no
+     extra work. The ones below are the exceptions — aliases
+     that pointed to a light-only value that has no semantic
+     token counterpart, or where the mapping itself changes.
+     ════════════════════════════════════════════════════════════ */
+
+  /* ── Page-level ─────────────────────────────────────────── */
+  --color-background:               var(--color-bg-canvas);
+  --color-foreground:               var(--color-text-primary);
+
+  /* ── Surface layers ─────────────────────────────────────── */
+  --color-surface:                  var(--color-bg-surface);
+  --color-surface-foreground:       var(--color-text-primary);
+
+  --color-sunken:                   var(--color-bg-sunken);
+  --color-sunken-foreground:        var(--color-text-secondary);
+
+  --color-raised:                   var(--color-bg-raised);
+
+  /* ── Primary (brand CTA) ────────────────────────────────── */
+  --color-primary:                  var(--color-brand-default);
+  --color-primary-foreground:       var(--color-brand-on);
+  --color-primary-hover:            var(--color-brand-hover);
+  --color-primary-active:           var(--color-brand-active);
+  --color-primary-subtle:           var(--color-brand-subtle);
+  --color-primary-muted:            var(--color-brand-muted);
+
+  /* ── Secondary ──────────────────────────────────────────── */
+  --color-secondary:                var(--color-bg-surface);
+  --color-secondary-foreground:     var(--color-text-secondary);
+
+  /* ── Muted ──────────────────────────────────────────────── */
+  --color-muted:                    var(--color-bg-sunken);
+  --color-muted-foreground:         var(--color-text-tertiary);
+
+  /* ── Accent ─────────────────────────────────────────────── */
+  --color-accent:                   var(--color-accent-default);
+  --color-accent-foreground:        var(--color-accent-fg);
+  --color-accent-subtle:            var(--color-accent-subtle);
+
+  /* ── Destructive ────────────────────────────────────────── */
+  --color-destructive:              var(--color-bg-error);
+  --color-destructive-border:       var(--color-border-error);
+
+  /* ── Status fills ───────────────────────────────────────── */
+  --color-success:                  var(--color-bg-success);
+  --color-success-border:           var(--color-border-success);
+
+  --color-warning:                  var(--color-bg-warning);
+  --color-warning-border:           var(--color-border-warning);
+
+  --color-info:                     var(--color-bg-info);
+
+  /* ── Borders, inputs, rings ─────────────────────────────── */
+
+  --color-input:                    var(--color-input-border);
+  --color-input-background:         var(--color-input-bg);
+  --color-input-filled:             var(--color-input-bg-filled);
+  /* --color-input-text:               var(--color-input-text); */
+  --color-ring:                     var(--color-border-focus);
+
+  /* ── Link ───────────────────────────────────────────────── */
+  --color-link:                     var(--color-text-link);
+  --color-link-hover:               var(--color-text-link-hover);
+
+}
